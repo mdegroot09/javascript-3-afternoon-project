@@ -50,8 +50,20 @@ var employees = [
     3. Return the updated employee array.
 */
 
-//Code Here
+function employeeUpdater(){
+  employees.forEach(function(element,i){
+    if (element.firstName === "Theo"){
+      employees.splice(i,1);
+      i -= 1;
+    }
+    if(element.firstName === "Lorie"){
+      element.department = "HR";
+    }
+  })
+  return employees;
+}
 
+employeeUpdater();
 
 
 ////////// PROBLEM 2 //////////
@@ -68,9 +80,19 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-//Code Here
+function removeDuplicates(array){
+  for(i = 0; i < array.length; i++){
+    for(j = 0; j < array.length; j++){
+      if(i !== j && array[i] === array[j]){
+        array.splice(i, 1);
+        i -= 1;
+      }
+    }
+  }
+  return array;
+}
 
-
+let updataedArr = removeDuplicates(workplaceAccidents);
 
 ////////// PROBLEM 3 //////////
 
@@ -100,7 +122,17 @@ var cat = {
 var grumpyActivity;
 var fluffy2ndFriend;
 
+function updateCat (){
+  cat.catFriends.forEach(function(item, i){
+    if(item.name === "Grumpy"){
+      grumpyActivity = item.activities[1];
+    } else if (i === 1){
+      fluffy2ndFriend = item.name;
+    }
+  })
+}
 
+updateCat()
 
 ////////// PROBLEM 4 //////////
 
@@ -138,9 +170,13 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
+function recordCleaner(){
+  myCar.accidents.forEach(function(accident){
+    accident.atFaultForAccident = false;
+  })
+}
 
-
+recordCleaner(myCar)
 
 ////////// PROBLEM 5 //////////
 
@@ -157,6 +193,25 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-//Code Here
+function looper(arr){
+  for(i = 0; i < arr.length; i++){
+    console.log(arr)
+    for(j = 0; j < arr[i].length; j++){
+      if (arr[i][j] % 2 === 0){
+        arr[i][j] = "even";
+        console.log("even")
+        console.log(arr[i][j])
+      } else {
+        arr[i][j] = "odd";
+        console.log("odd")
+        console.log(arr[i][j])
+      }
+    }
+  }
+  return arr;
+}
 
-
+updatedArr = looper(numsArr);
+numsArr = updatedArr
+console.log("updatedArr " + updatedArr)
+console.log("numsArr " + numsArr);
