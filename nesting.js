@@ -199,12 +199,10 @@ function looper(arr){
     for(j = 0; j < arr[i].length; j++){
       if (arr[i][j] % 2 === 0){
         arr[i][j] = "even";
-        console.log("even")
-        console.log(arr[i][j])
+        console.log("even", arr[i][j])
       } else {
         arr[i][j] = "odd";
-        console.log("odd")
-        console.log(arr[i][j])
+        console.log("odd", arr[i][j])
       }
     }
   }
