@@ -193,39 +193,18 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-function looper(arr){
-  for(i = 0; i < arr.length; i++){
-    console.log(arr)
-    for(j = 0; j < arr[i].length; j++){
-      if (arr[i][j] % 2 === 0){
-        arr[i][j] = "even";
-        console.log("even", arr[i][j])
+function looper(){
+  for(i = 0; i < numsArr.length; i++){
+    console.log(numsArr)
+    for(j = 0; j < numsArr[i].length; j++){
+      if (numsArr[i][j] % 2 === 0){
+        numsArr[i][j] = "even";
+        console.log("even", numsArr[i][j])
       } else {
-        arr[i][j] = "odd";
-        console.log("odd", arr[i][j])
+        numsArr[i][j] = "odd";
+        console.log("odd", numsArr[i][j])
       }
     }
   }
-  return arr;
+  return numsArr;
 }
-
-updatedArr = looper(numsArr);
-numsArr = updatedArr
-console.log("updatedArr " + updatedArr)
-console.log("numsArr " + numsArr);
-
-// function looper() {
-//   for (let i = 0; i < numsArr.length; i++){
-//     for (let j = 0; j < numsArr[i].length; j++){
-//       if(numsArr[i][j] % 2 === 0){
-//         numsArr[i][j] = “even”
-//       } else {
-//         numsArr[i][j] = “odd”
-//       }
-//     }
-//   }
-//   console.log(numsArr)
-//   return numsArr
-//  }
-
-// numsArr = looper()
