@@ -213,3 +213,19 @@ updatedArr = looper(numsArr);
 numsArr = updatedArr
 console.log("updatedArr " + updatedArr)
 console.log("numsArr " + numsArr);
+
+// function looper() {
+//   for (let i = 0; i < numsArr.length; i++){
+//     for (let j = 0; j < numsArr[i].length; j++){
+//       if(numsArr[i][j] % 2 === 0){
+//         numsArr[i][j] = “even”
+//       } else {
+//         numsArr[i][j] = “odd”
+//       }
+//     }
+//   }
+//   console.log(numsArr)
+//   return numsArr
+//  }
+
+// numsArr = looper()
